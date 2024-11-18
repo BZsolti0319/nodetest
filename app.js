@@ -22,7 +22,11 @@ app.get('/nodejs', (req, res) =>{
     res.send("A Node.js egy olyan szerveroldali JavaScript futtatókörnyezet, amely a V8 JavaScript motorra épül.");
 });
 app.get('/html', (req,res) =>{
-    req.get('./public/index.html')
-    res.send('./public/index.html')
+    res.send('index.html')
+});
+
+app.get('/api/users.js', (req,res)=>{
+    req.get("./api/users")
+    res.send(users)    
 });
 
